@@ -1,4 +1,5 @@
-package br.com.caelum.ed;
+package br.com.caelum.ed.entidades;
+
 
 public class Vetor {
     private final Aluno[] alunos = new Aluno[100];
@@ -21,11 +22,16 @@ public class Vetor {
     }
 
     public boolean contem(Aluno aluno) {
+        for (int i = 0; i < this.totalDeAlunos; i++) {
+            if (aluno.equals(this.alunos[i])) {
+                return true;
+            }
+        }
         return false;
     }
 
     public int tamanho() {
-        return 0;
+        return this.totalDeAlunos;
     }
 
     public String toString() {
