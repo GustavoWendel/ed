@@ -1,4 +1,4 @@
-package br.com.caelum.ed;
+package br.com.caelum.ed.testes;
 
 import br.com.caelum.ed.entidades.*;
 

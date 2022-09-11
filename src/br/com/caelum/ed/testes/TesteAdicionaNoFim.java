@@ -1,10 +1,11 @@
-package br.com.caelum.ed;
+package br.com.caelum.ed.testes;
 
 import br.com.caelum.ed.entidades.*;
 
-public class TestePegaPorPosicao {
+public class TesteAdicionaNoFim {
 
 	public static void main(String[] args) {
+	
 		Aluno a1 = new Aluno();
 		Aluno a2 = new Aluno();
 		
@@ -16,11 +17,8 @@ public class TestePegaPorPosicao {
 		lista.adiciona(a1);
 		lista.adiciona(a2);
 		
-		Aluno aluno1 = lista.pega(0);
-		Aluno aluno2 = lista.pega(1);
-		
-		System.out.println(aluno1);
-		System.out.println(aluno2);
+		System.out.println(lista);
+
 	}
 
 }
