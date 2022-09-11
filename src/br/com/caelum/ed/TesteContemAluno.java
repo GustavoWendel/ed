@@ -1,5 +1,7 @@
 package br.com.caelum.ed;
 
+import br.com.caelum.ed.entidades.*;
+
 public class TesteContemAluno {
 
 	public static void main(String[] args) {
