@@ -11,11 +11,31 @@ public class Vetor {
     }
 
     public void adiciona(int posicao, Aluno aluno) {
+        if (!this.posicaoValida(posicao)) {
+            throw new IllegalArgumentException("Posição inválida");
+        }
 
+        for (int i = this.totalDeAlunos - 1; i >= posicao; i--) {
+            this.alunos[i + 1] = this.alunos[i];
+        }
+
+        this.alunos[posicao] = aluno;
+        totalDeAlunos++;
+    }
+
+    private boolean posicaoValida(int posicao) {
+        return posicao >= 0 && posicao <= this.totalDeAlunos;
     }
 
     public Aluno pega(int posicao) {
-        return null;
+        if (!posicaoOcupada(posicao)) {
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        return this.alunos[posicao];
+    }
+
+    private boolean posicaoOcupada(int posicao) {
+        return posicao > 0 && posicao < this.totalDeAlunos;
     }
 
     public void remove(int posicao) {
