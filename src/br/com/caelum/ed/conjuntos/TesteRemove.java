@@ -2,7 +2,7 @@ package br.com.caelum.ed.conjuntos;
 
 import java.util.List;
 
-public class TesteAdiciona {
+public class TesteRemove {
     public static void main(String[] args) {
         ConjuntoEspalhamento conjunto = new ConjuntoEspalhamento();
         conjunto.adiciona("Rafael");
@@ -11,6 +11,16 @@ public class TesteAdiciona {
 
         List<String> palavras = conjunto.pegaTodas();
 
+        for (String palavra : palavras) {
+            System.out.println(palavra);
+        }
+
+        conjunto.remove("Rafael");
+
+        palavras = conjunto.pegaTodas();
+
+        System.out.println();
+        System.out.println("Depois de remover");
         for (String palavra : palavras) {
             System.out.println(palavra);
         }
